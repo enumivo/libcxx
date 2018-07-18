@@ -172,7 +172,7 @@ operator delete[] (void* ptr, size_t) _NOEXCEPT
     ::operator delete[](ptr);
 }
 
-#if !defined(_LIBCPP_HAS_NO_ALIGNED_ALLOCATIONS)
+#if !defined(_LIBCPP_HAS_NO_ALIGNED_ALLOCATION)
 
 _LIBCPP_WEAK
 void *
