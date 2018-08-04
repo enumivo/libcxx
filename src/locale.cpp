@@ -664,6 +664,7 @@ locale::id::__get()
     return __id_ - 1;
 }
 
+
 void
 locale::id::__init()
 {
