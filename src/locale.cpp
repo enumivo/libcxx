@@ -44,10 +44,6 @@
 #pragma clang diagnostic ignored "-Wsign-conversion"
 #endif
 
-extern "C" void enumivo_assert(bool, const char*);
-size_t strftime(char*, size_t, const char*, const struct tm*) { enumivo_assert(false, "strftime called"); }
-size_t strftime_l(char*, size_t, const char*, const struct tm*, locale_t) { enumivo_assert(false, "strftime_l called"); }
-
 _LIBCPP_BEGIN_NAMESPACE_STD
 
 struct __libcpp_unique_locale {
@@ -667,7 +663,6 @@ locale::id::__get()
     call_once(__flag_, __fake_bind(&locale::id::__init, this));
     return __id_ - 1;
 }
-
 
 void
 locale::id::__init()
